@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Google Or Not",
+    "version": "1.0",
+    "description": "Routes queries to preferred LLM or Google based on query intent",
+    "permissions": [
+        "webNavigation",
+        "storage"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    }
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <h2>Google or Not</h2>
+
+    <div class="switch-container">
+        <span>Smart Routing</span>
+        <label class="toggle-switch">
+            <input type="checkbox" id="routingToggle">
+            <span class="slider"></span>
+        </label>
+    </div>
+
+    <div class="llm-selector">
+        <h3>Select Preferred LLM</h3>
+        <div class="radio-group">
+            <div class="radio-option">
+                <input type="radio" id="claude" name="llm" value="claude">
+                <label for="claude">Claude (Anthropic)</label>
+            </div>
+            <div class="radio-option">
+                <input type="radio" id="chatgpt" name="llm" value="chatgpt">
+                <label for="chatgpt">ChatGPT (OpenAI)</label>
+            </div>
+            <div class="radio-option">
+                <input type="radio" id="perplexity" name="llm" value="perplexity">
+                <label for="perplexity">Perplexity</label>
+            </div>
+            <!--
+            <div class="radio-option">
+                <input type="radio" id="gemini" name="llm" value="gemini">
+                <label for="gemini">Gemini</label>
+            </div>
+            <div class="radio-option">
+                <input type="radio" id="meta" name="llm" value="meta">
+                <label for="meta">Meta AI</label>
+            </div>
+            -->
+        </div>
+    </div>
+
+    <div class="stats">
+        <h3>Usage Statistics</h3>
+        <div class="stat-item">
+            <span>Claude:</span>
+            <span id="claudeCount">0</span>
+        </div>
+        <div class="stat-item">
+            <span>ChatGPT:</span>
+            <span id="chatgptCount">0</span>
+        </div>
+        <div class="stat-item">
+            <span>Perplexity:</span>
+            <span id="perplexityCount">0</span>
+        </div>
+        <!--
+        <div class="stat-item">
+            <span>Gemini:</span>
+            <span id="geminiCount">0</span>
+        </div>
+        <div class="stat-item">
+            <span>Meta AI:</span>
+            <span id="metaCount">0</span>
+        </div>
+        -->
+        <div class="stat-item">
+            <span>Google:</span>
+            <span id="googleCount">0</span>
+        </div>
+    </div>
+
+    <div class="rules-section">
+        <div class="rules-header" id="rulesHeader">
+            <h3>Routing Rules</h3>
+            <span class="expand-icon">&#x25BC;</span>
+        </div>
+        <div class="rules-content" id="rulesContent">
+            <p>When enabled, queries are sent to your selected LLM if they:</p>
+            <ul>
+                <li>End with a question mark (?)</li>
+                <li>Start with question words (what, when, where, etc.)</li>
+                <li>Contain explanation-seeking phrases (explain, help me understand)</li>
+                <li>Indicate problem-solving needs (troubleshoot, help)</li>
+                <li>Seek opinions or recommendations (recommend, pros and cons)</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
