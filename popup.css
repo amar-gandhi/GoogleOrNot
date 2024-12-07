@@ -6,7 +6,16 @@ body {
     font-size: 14px;
 }
 
-h2, h3 {
+h2 {
+    display:flex; 
+    align-items: center;
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #233A71;
+}
+
+h3 {
     margin-top: 0;
     margin-bottom: 12px;
     color: #1a1a1a;
